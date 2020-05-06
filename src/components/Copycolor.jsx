@@ -1,8 +1,11 @@
-import React from'react';
+import React from "react";
 
-const Copycolor =()=>{
-    return(
-
-    )
-}
+const Copycolor = ({ value }) => {
+  console.log("click");
+  return (
+    <div>
+      <h1>Copiado al portapaples</h1>
+    </div>
+  );
+};
 export default Copycolor;
