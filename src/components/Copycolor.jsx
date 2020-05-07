@@ -1,10 +1,9 @@
 import React from "react";
 
-const Copycolor = ({ value }) => {
-  console.log("click");
+const Copycolor = () => {
   return (
-    <div>
-      <h1>Copiado al portapaples</h1>
+    <div className="modal-color">
+      <h1>Copiado al portapapeles</h1>
     </div>
   );
 };

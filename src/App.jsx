@@ -2,7 +2,7 @@ import React from "react";
 import Showcolors from "./components/Showcolors";
 import { Link, Route } from "wouter";
 import "./App.css";
-//import Copycolor from "./components/Copycolor";
+import { Button } from "@material-ui/core";
 
 function App() {
   return (
@@ -15,10 +15,14 @@ function App() {
       </div>
       <div className="container-button ">
         <Link to="/1">
-          <button type="button">Atras</button>
+          <Button variant="contained" color="primary" size="large">
+            Pagina 1
+          </Button>
         </Link>
         <Link to="/2">
-          <button type="button">Siguiente</button>
+          <Button variant="contained" color="primary">
+            Pagina 2
+          </Button>
         </Link>
       </div>
     </div>
