@@ -11,11 +11,12 @@ function App() {
         <h1> Colores</h1>
       </div>
       <div className="container-colors ">
-        <Route component={Showcolors} path="/:page" />
+        <Route exact path="/" component={Showcolors} />
+        <Route path="/:page" component={Showcolors} />
       </div>
       <div className="container-button ">
         <Link to="/1">
-          <Button variant="contained" color="primary" size="large">
+          <Button variant="contained" color="primary">
             Pagina 1
           </Button>
         </Link>

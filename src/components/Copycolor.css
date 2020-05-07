@@ -3,5 +3,5 @@
   display: flex;
   background-color: rgb(197, 21, 21);
   justify-content: center;
-  z-index: 1;
+  z-index: 10;
 }
