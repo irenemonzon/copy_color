@@ -7,8 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(
     90deg,
-    rgba(121, 157, 191, 1) 0%,
-    rgba(118, 120, 190, 1) 100%
+    rgba(140, 179, 215, 1) 100%,
+    rgba(80, 85, 238, 0.9962359943977591) 100%
   );
 }
 

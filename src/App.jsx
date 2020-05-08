@@ -2,7 +2,7 @@ import React from "react";
 import Showcolors from "./components/Showcolors";
 import { Link, Route } from "wouter";
 import "./App.css";
-import { Button } from "@material-ui/core";
+import Button from "react-bootstrap/Button";
 
 function App() {
   return (
@@ -16,12 +16,12 @@ function App() {
       </div>
       <div className="container-button ">
         <Link to="/1">
-          <Button variant="contained" color="primary">
+          <Button variant="primary" active>
             Pagina 1
           </Button>
         </Link>
         <Link to="/2">
-          <Button variant="contained" color="primary">
+          <Button variant="primary" active>
             Pagina 2
           </Button>
         </Link>

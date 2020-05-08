@@ -3,36 +3,39 @@ import Getcolors from "../services/Getcolors";
 import "./Showcolors.css";
 import Copycolor from "./Copycolor";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { Button } from "@material-ui/core";
+import Button from "react-bootstrap/Button";
 
 const Showcolors = ({ params }) => {
   //pasa el parametro para cambiar  la pagina
   const { page } = params;
   //state de los colores
   const [colors, setColor] = useState([]);
-
+  //state para copiar valor de color elegido
   const [copied, setcopied] = useState(false);
   const [value, setValue] = useState("");
-
+  //llamado a la funcion de copiar,se cambia el state para mostrar modal copiado
   const Copy = color => {
     setcopied(true);
     setValue(color);
   };
+  //si boton de copiado se activa, mostrar modal  de copiado por 2 s
   if (copied === true) {
     setTimeout(function() {
       setcopied(false);
-    }, 3000);
+    }, 2000);
   }
-
+  //al iniciarse se hace llamado a la api, con el parametro de la pagina, y se pasan los valores al state para mostrarlos
   useEffect(() => {
     Getcolors({ page }).then(colors => setColor(colors));
   }, [page]);
 
-  //muestra la información de los colores
+  //muestra la información de los colores, y copia al portapapeles el color elegido
   return (
     <div className="container-color ">
       {copied ? (
-        <Copycolor value={value} />
+        <div className="container-modal">
+          <Copycolor value={value} />
+        </div>
       ) : (
         <div className="container-color ">
           {colors.map(({ id, name, year, color, pantone_value }) => (
@@ -42,7 +45,7 @@ const Showcolors = ({ params }) => {
                   <h3>{name}</h3>
                 </div>
                 <CopyToClipboard text={color} onCopy={() => Copy(color)}>
-                  <Button variant="outlined" color="primary">
+                  <Button variant="outline-primary" size="sm">
                     {color}
                   </Button>
                 </CopyToClipboard>
