@@ -1,6 +1,6 @@
-# copy_color
+# Copy Color
 
-Interfaz web creada para visualizar una gran gama de colores y poder copiar su codigo al portapapeles, para asi simplificar y agilizar el trabajo en cualquier diseño web requerido.
+Interfaz web creada para visualizar y copiar una gran gama de colores,logrando asi simplificar y agilizar el trabajo en cualquier diseño web requerido.
 
 El proyecto fue desarrollado con las siguientes tecnologías y frameworks:
 

@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="container ">
       <div className="container-title">
-        <h1> Colores</h1>
+        <h1> Copy Color</h1>
       </div>
       <div className="container-colors ">
         <Route exact path="/" component={Showcolors} />
