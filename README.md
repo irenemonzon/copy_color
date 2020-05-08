@@ -21,7 +21,7 @@ Para su instalación
 
 ### npm install
 
-- Correr la interfaz en el servidor local
+- Visualizar la interfaz en el servidor local
 
 ### npm start
 
